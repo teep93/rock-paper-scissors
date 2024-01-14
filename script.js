@@ -1,5 +1,17 @@
 //begin with function called getComputerChoice
 //that will randomly return "rock", "paper" or "scissors"
+
+
+
+
+function getComputerChoice() {
+    const choice1 = rock;
+    const choice2 = paper;
+    const choice3 = scissors;
+
+}
+
+
 function playRound(playerSelection, computerSelection) {
     // your code here!
   }
