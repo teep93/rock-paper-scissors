@@ -1,15 +1,16 @@
 //begin with function called getComputerChoice
 //that will randomly return "rock", "paper" or "scissors"
 
-let getComputerChoice_one = 'rock';
-let getComputerChoice_two = 'paper';
-let getComputerChoice_three = 'scissors';
+function getComputerChoice() {
+  let getComputerChoice_one = 'rock';
+  let getComputerChoice_two = 'paper';
+  let getComputerChoice_three = 'scissors';
 
-let getComputerChoiceArr = [getComputerChoice_one, getComputerChoice_two, getComputerChoice_three];
-let random = getComputerChoiceArr[Math.floor(Math.random() * getComputerChoiceArr.length)]
+  let getComputerChoiceArr = [getComputerChoice_one, getComputerChoice_two, getComputerChoice_three];
+  let random = getComputerChoiceArr[Math.floor(Math.random() * getComputerChoiceArr.length)]
 
-console.log(random);
-
+  return random 
+}
 
 
 
@@ -18,9 +19,9 @@ function playRound(playerSelection, computerSelection) {
     // your code here!
   }
    
-  const playerSelection = "rock";
-  const computerSelection = getComputerChoice();
-  console.log(playRound(playerSelection, computerSelection));
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
 //then a function that plays a single round of RPS
 //the function should take 2 parameters
 //playerSelection and computerSelection
