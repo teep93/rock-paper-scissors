@@ -1,15 +1,17 @@
 //begin with function called getComputerChoice
 //that will randomly return "rock", "paper" or "scissors"
 
+let getComputerChoice_one = 'rock';
+let getComputerChoice_two = 'paper';
+let getComputerChoice_three = 'scissors';
+
+let getComputerChoiceArr = [getComputerChoice_one, getComputerChoice_two, getComputerChoice_three];
+let random = getComputerChoiceArr[Math.floor(Math.random() * getComputerChoiceArr.length)]
+
+console.log(random);
 
 
 
-function getComputerChoice() {
-    const choice1 = rock;
-    const choice2 = paper;
-    const choice3 = scissors;
-
-}
 
 
 function playRound(playerSelection, computerSelection) {
