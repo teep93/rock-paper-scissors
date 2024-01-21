@@ -1,85 +1,124 @@
-//begin with function called getComputerChoice
-//that will randomly return "rock", "paper" or "scissors"
+let playerScore =  0;
+let computerScore = 0;
+let roundResult = `Your score: ${playerScore} Computer score: ${computerScore}`;
+
+
 
 function getComputerChoice() {
-  let getComputerChoice_one = 'rock';
-  let getComputerChoice_two = 'paper';
-  let getComputerChoice_three = 'scissors';
+let getComputerChoiceOne = "rock";
+let getComputerChoiceTwo = "paper";
+let getComputerChoiceThree = "scissors";
 
-  let getComputerChoiceArr = [getComputerChoice_one, getComputerChoice_two, getComputerChoice_three];
-  let random = getComputerChoiceArr[Math.floor(Math.random() * getComputerChoiceArr.length)]
+let getComputerChoiceArr = [
+getComputerChoiceOne,
+getComputerChoiceTwo,
+getComputerChoiceThree,
+];
 
-  return random;
+let random =
+getComputerChoiceArr[
+Math.floor(Math.random() * getComputerChoiceArr.length)
+];
+
+return random;
 }
 
+let resultLose = "You lose this round!";
+let resultWin = "You win this round!";
+let resultTie = "It's a TIE, try again";
 
+function playRound() {
 
+let playerSelection = prompt("Rock, Scissors or Paper?");
+let computerSelection = getComputerChoice();
 
-function playRound(playerSelection, computerSelection) {
-  if (playerSelection.toLowerCase() == "rock" && computerSelection == "paper")
-
-    console.log("You lose! Paper beats Rock!");
-
-
-
-  else if (playerSelection.toLowerCase() == "rock" && computerSelection == "scissors")
-
-    console.log("You Win! Rock beats Scissors!");
-
-
-
-  else if (playerSelection.toLowerCase() == "rock" && computerSelection == "rock")
-
-    console.log("It's a TIE, try again.");
-
-
-
-  else if (playerSelection.toLowerCase() == "paper" && computerSelection == "rock")
-
-    console.log("You win! Paper beats Rock!");
-
-
-
-  else if (playerSelection.toLowerCase() == "paper" && computerSelection == "scissors")
-
-    console.log("You lose! Scissors beats Paper!");
-
-
-
-  else if (playerSelection.toLowerCase() == "paper" && computerSelection == "paper")
-
-    console.log("It's a TIE, try again.");
-
-
-
-  else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "rock")
-
-    console.log("You lose! Rock beats Scissors!");
-
-
-
-  else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "paper")
-
-    console.log("You win! Scissors beats Paper!");
-
-
-
-  else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "scissors")
-
-    console.log("It's a TIE, try again.");
+if (playerSelection === computerSelection) {
+console.log(resultTie);
+return playRound();
+} else if (playerSelection.toLowerCase() == "rock" && computerSelection == "paper") {
+computerScore += 1;
+console.log(resultLose);
+return resultLose;
+} else if (
+playerSelection.toLowerCase() == "rock" &&
+computerSelection == "scissors"
+) {
+playerScore += 1;
+console.log(resultWin);
+return resultWin;
+} else if (
+playerSelection.toLowerCase() == "rock" &&
+computerSelection == "rock"
+) {
+console.log(resultTie);
+return resultTie;
+} else if (
+playerSelection.toLowerCase() == "paper" &&
+computerSelection == "rock"
+) {
+playerScore += 1;
+console.log(resultWin);
+return resultWin;
+} else if (
+playerSelection.toLowerCase() == "paper" &&
+computerSelection == "scissors"
+) {
+computerScore += 1;
+console.log(resultLose);
+return resultLose;
+} else if (
+playerSelection.toLowerCase() == "paper" &&
+computerSelection == "paper"
+) {
+console.log(resultTie);
+return resultTie;
+} else if (
+playerSelection.toLowerCase() == "scissors" &&
+computerSelection == "rock"
+) {
+computerScore += 1;
+console.log(resultLose);
+return resultLose;
+} else if (
+playerSelection.toLowerCase() == "scissors" &&
+computerSelection == "paper"
+) {
+playerScore += 1;
+console.log(resultWin);
+return resultWin;
+} else if (
+playerSelection.toLowerCase() == "scissors" &&
+computerSelection == "scissors"
+) {
+console.log(resultTie);  
+return resultTie;
+}
 }
 
+function game() {
 
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
-//then a function that plays a single round of RPS
-//the function should take 2 parameters
-//playerSelection and computerSelection
+const gameLost = "The computer has won!"
+const gameWon = "You have won!"
+const gameTie = "It's a TIE!"
 
+playRound();
+console.log("Your score: " + (playerScore), " Computer Score: " + (computerScore));
+playRound();
+console.log("Your score: " + (playerScore), " Computer Score: " + (computerScore));
+playRound();
+console.log("Your score: " + (playerScore), " Computer Score: " + (computerScore));
+playRound();
+console.log("Your score: " + (playerScore), " Computer Score: " + (computerScore));
+playRound();
 
-//return a string that declares a winner of round
-//make it case insensitive
-//account for TIES be re-playing round
+if (computerScore > playerScore) {
+console.log(gameLost);
+} else if (computerScore < playerScore) {
+console.log(gameWon);
+} else if (computerScore === playerScore) {
+console.log(gameTIE);
+}
 
-//return results of this function call not console.log it
+}
+
+game();
