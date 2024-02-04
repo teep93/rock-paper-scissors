@@ -27,6 +27,16 @@ let resultLose = "You lose this round!";
 let resultWin = "You win this round!";
 let resultTie = "It's a TIE, try again";
 
+const rockSelection = document.querySelector('rockSelection');
+rockSelection.addEventListener('click', playRound)
+
+const paperSelection = document.querySelector('paperSelection');
+rockSelection.addEventListener('click', playRound)
+
+const scissorsSelection = document.querySelector('scissorsSelection');
+rockSelection.addEventListener('click', playRound)
+
+
 function playRound() {
 
 let playerSelection = prompt("Rock, Scissors or Paper?");
@@ -101,15 +111,15 @@ const gameLost = "The computer has won!"
 const gameWon = "You have won!"
 const gameTie = "It's a TIE!"
 
-playRound();
-console.log("Your score: " + (playerScore), " Computer Score: " + (computerScore));
-playRound();
-console.log("Your score: " + (playerScore), " Computer Score: " + (computerScore));
-playRound();
-console.log("Your score: " + (playerScore), " Computer Score: " + (computerScore));
-playRound();
-console.log("Your score: " + (playerScore), " Computer Score: " + (computerScore));
-playRound();
+// playRound();
+// console.log("Your score: " + (playerScore), " Computer Score: " + (computerScore));
+// playRound();
+// console.log("Your score: " + (playerScore), " Computer Score: " + (computerScore));
+// playRound();
+// console.log("Your score: " + (playerScore), " Computer Score: " + (computerScore));
+//playRound();
+// console.log("Your score: " + (playerScore), " Computer Score: " + (computerScore));
+//playRound();
 
 if (computerScore > playerScore) {
 console.log(gameLost);
