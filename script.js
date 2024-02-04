@@ -116,7 +116,7 @@ console.log(gameLost);
 } else if (computerScore < playerScore) {
 console.log(gameWon);
 } else if (computerScore === playerScore) {
-console.log(gameTIE);
+console.log(gameTie);
 }
 
 }
