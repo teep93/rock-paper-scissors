@@ -1,6 +1,7 @@
-let playerScore =  0;
+
+let playerScore = 0;
 let computerScore = 0;
-let roundResult = `Your score: ${playerScore} Computer score: ${computerScore}`;
+
 
 
 
@@ -23,112 +24,102 @@ Math.floor(Math.random() * getComputerChoiceArr.length)
 return random;
 }
 
+
+
 let resultLose = "You lose this round!";
 let resultWin = "You win this round!";
 let resultTie = "It's a TIE, try again";
 
-const rockSelection = document.querySelector('rockSelection');
-rockSelection.addEventListener('click', playRound)
+let playerSelection = ''
+let computerSelection = ''
 
-const paperSelection = document.querySelector('paperSelection');
-rockSelection.addEventListener('click', playRound)
 
-const scissorsSelection = document.querySelector('scissorsSelection');
-rockSelection.addEventListener('click', playRound)
+const rockBtn = document.querySelector('#rockBtn');
+rockBtn.addEventListener('click', () => {
+    playerSelection = "rock";
+    computerSelection = getComputerChoice();
+    playRound(playerSelection, computerSelection);
+})
+
+const paperBtn = document.querySelector('#paperBtn');
+paperBtn.addEventListener('click', () => {
+    playerSelection = "paper";
+    computerSelection = getComputerChoice();
+    playRound(playerSelection, computerSelection);
+})
+
+const scissorsBtn = document.querySelector('#scissorsBtn');
+scissorsBtn.addEventListener('click', () => {
+    playerSelection = "scissors";
+    computerSelection = getComputerChoice();
+    playRound(playerSelection, computerSelection);
+})
 
 
 function playRound() {
 
-let playerSelection = prompt("Rock, Scissors or Paper?");
-let computerSelection = getComputerChoice();
 
-if (playerSelection === computerSelection) {
-console.log(resultTie);
+if (playerSelection.toLowerCase === computerSelection) {
 return playRound();
 } else if (playerSelection.toLowerCase() == "rock" && computerSelection == "paper") {
-computerScore += 1;
-console.log(resultLose);
-return resultLose;
+computerScore++;
+console.log((computerScore), (playerScore));
+return computerScore;
 } else if (
 playerSelection.toLowerCase() == "rock" &&
 computerSelection == "scissors"
 ) {
-playerScore += 1;
-console.log(resultWin);
-return resultWin;
+playerScore++;
+console.log((computerScore), (playerScore));
+return playerScore;
 } else if (
 playerSelection.toLowerCase() == "rock" &&
 computerSelection == "rock"
 ) {
-console.log(resultTie);
-return resultTie;
+console.log((computerScore), (playerScore));
+return playRound;
 } else if (
 playerSelection.toLowerCase() == "paper" &&
 computerSelection == "rock"
 ) {
-playerScore += 1;
-console.log(resultWin);
-return resultWin;
+playerScore++;
+console.log((computerScore), (playerScore));
+return playerScore;
 } else if (
 playerSelection.toLowerCase() == "paper" &&
 computerSelection == "scissors"
 ) {
-computerScore += 1;
-console.log(resultLose);
-return resultLose;
+computerScore++;
+console.log((computerScore), (playerScore));
+return computerScore;
 } else if (
 playerSelection.toLowerCase() == "paper" &&
 computerSelection == "paper"
 ) {
-console.log(resultTie);
-return resultTie;
+console.log((computerScore), (playerScore));
+return playRound;
 } else if (
 playerSelection.toLowerCase() == "scissors" &&
 computerSelection == "rock"
 ) {
-computerScore += 1;
-console.log(resultLose);
-return resultLose;
+computerScore++;
+console.log((computerScore), (playerScore));
+return computerScore;
 } else if (
 playerSelection.toLowerCase() == "scissors" &&
 computerSelection == "paper"
 ) {
-playerScore += 1;
-console.log(resultWin);
-return resultWin;
+playerScore++;
+console.log((computerScore), (playerScore));
+return playerScore;
 } else if (
 playerSelection.toLowerCase() == "scissors" &&
 computerSelection == "scissors"
 ) {
-console.log(resultTie);  
-return resultTie;
+console.log((computerScore), (playerScore));
+return playRound;
 }
 }
 
-function game() {
 
-const gameLost = "The computer has won!"
-const gameWon = "You have won!"
-const gameTie = "It's a TIE!"
 
-// playRound();
-// console.log("Your score: " + (playerScore), " Computer Score: " + (computerScore));
-// playRound();
-// console.log("Your score: " + (playerScore), " Computer Score: " + (computerScore));
-// playRound();
-// console.log("Your score: " + (playerScore), " Computer Score: " + (computerScore));
-//playRound();
-// console.log("Your score: " + (playerScore), " Computer Score: " + (computerScore));
-//playRound();
-
-if (computerScore > playerScore) {
-console.log(gameLost);
-} else if (computerScore < playerScore) {
-console.log(gameWon);
-} else if (computerScore === playerScore) {
-console.log(gameTie);
-}
-
-}
-
-game();
