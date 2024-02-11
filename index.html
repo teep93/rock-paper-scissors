@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
-<title>Page Title</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="">
-<style>
-</style>
+  <meta charset="UTF-8" />
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,300;1,900&display=swap"
+      rel="stylesheet">
+  <style></style>
 
-<body>
+  <body>
+    <div id="choices"></div>
+    <div class="">
+      <h1>ROCK PAPER SCISSORS</h1>
+    <div class = choiceWindow>  
+      <div class="playerChoice"></div>
+      <div class="computerChoice"></div>
+    </div>
 
-
-
-<div class="">
- <h1>ROCK PAPER SCISSORS</h1>
- <button id ="rockBtn">ROCK</button>
- <button id ="paperBtn">PAPER</button>
- <button id ="scissorsBtn">SCISSORS</button>
-</div>
-
-<div class="playerWindow">
-  <p>"Your score here"</p>
-  <img>
-  <img>
-  <img>
-</div>
-<div class="computerWindow">
-  <p>Computer score here"</p>
-  <img>
-  <img>
-  <img>     
-</div>
-<script src="script.js"></script>
-
-</body>
+  <div class="yourWindow">
+    <div class="yourScore">Your score: 0</div>
+    
+    <div class="compScore">Computer score: 0</div>
+  </div>
+  <div class="buttons">
+    <button id="rockBtn">ROCK</button>
+    <button id="paperBtn">PAPER</button>
+    <button id="scissorsBtn">SCISSORS</button>
+  </div>
+  <div class = "retry">
+    <div><button id="retryBtn">PLAY AGAIN</button></div>
+  </div>
+    <script src="script.js"></script>
+  </body>
 </html>

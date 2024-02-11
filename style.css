@@ -1,1 +1,62 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    background-color: bisque;
+}
+
+h1  {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    background-color: gold;
+    border-radius: 10px;
+    color: red;
+
+
+}
+
+.choiceWindow {
+    display: flex;
+    justify-content: space-between;
+    border: 20px;
+    padding: 50px;
+    gap: 100px;
     
+
+
+}
+
+
+
+.yourWindow {
+    display:flex;
+    
+    justify-content: space-between;   
+    border: 20px;
+    padding: 50px;
+    gap: 100px;
+
+}
+
+.buttons * {
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: #3882F6;
+    width: 150px;
+    padding: 10px;
+    color: white;
+    position: relative;
+    left: 200px;
+
+}
+
+.retry * {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    font-size: 30px;
+    border-radius: 10px;
+    color: red;
+    
+}
+
+
