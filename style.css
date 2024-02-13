@@ -37,18 +37,18 @@ h1  {
 
 }
 
-.buttons * {
-    font-size: 20px;
-    border-radius: 10px;
-    background-color: #3882F6;
-    width: 150px;
-    padding: 10px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    
+div.buttons * {
+   display: flex;
+   justify-content: center;
+   font-size: 30px;
+   align-items: space-around;
+   border-radius: 15px;
+   color: blue;
+   flex-direction:row-reverse;
 
 }
+
+
 
 .retry * {
     display: flex;
@@ -60,4 +60,9 @@ h1  {
     
 }
 
+div.one.two.three {
+    background-color: black;
+ 
+  
+}
 
