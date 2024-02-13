@@ -1,5 +1,5 @@
 # rock-paper-scissors
-
+https://www.theodinproject.com/lessons/foundations-revisiting-rock-paper-scissors <- TOP project
 https://teep93.github.io/rock-paper-scissors/ <- LIVE DEMO
 
 Main takeaways from this project:</br>
